@@ -161,11 +161,11 @@ formulario.addEventListener("submit", (e) => {
 
     document.getElementById("checkFormulario").classList.add("on-hidden");
     setTimeout(() => {
-      document.getElementById("checkFormulario").classList.remove("");
+      document.getElementById("checkFormulario").classList.remove("is-valid");
     }, 5000);
 
     document.querySelectorAll(".valid-feedback").forEach((icono) => {
-      icono.classList.remove("");
+      icono.classList.remove("is-valid");
       window.location.href="index.html";
     });
   } else {
