@@ -636,8 +636,9 @@ const filtrar = (event) => {
         let resultado = document.createElement("li");
         resultado.classList.add("li-box");
         resultado.innerHTML = `
-   
+        <div id="caja">
         <a href="/Detalle.html" id=${element.id}>${element.name}</a>
+        </div>
         `
         searchFilm.appendChild(resultado);
         resultado.classList.remove("li-box");

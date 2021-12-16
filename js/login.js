@@ -18,16 +18,15 @@ class User {
 }
 
 let users = [
-	new User('Administrador','Popcorn Movies','ad.popcorn.movies2021@gmail','12345678', true),
+	new User('Admin','Popcorn Movies','ad.popcorn.movies2021@gmail.com','12345678', true),
 	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false)
-	
 ]
+
 
 
 
 function loginCheck(event) {
 	event.preventDefault();
-	
 	let email = document.querySelector('#email').value;
 	let pass = document.querySelector('#pass').value;
 	let userLogged = users.find(User=>User.email == email);
