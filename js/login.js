@@ -21,7 +21,6 @@ let users = [
 	new User('Admin','Popcorn Movies','ad.popcorn.movies2021@gmail.com','12345678', true),
 	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false),
 	new User('Juan Ernesto','Villegas','jevillegas_123@hotmail,com','12345678', false),
-
 ]
 
 if(!localStorage.getItem("films")){
