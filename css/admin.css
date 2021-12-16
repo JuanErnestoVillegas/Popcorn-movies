@@ -1,0 +1,6 @@
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 330vh; */
+    background: linear-gradient(90deg, rgb(43, 114, 177), #55a6b8 );
+}

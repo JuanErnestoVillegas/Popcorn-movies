@@ -1,46 +1,60 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
-    background-position: center;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(/assets/img/anteo.jfif);
     background-repeat: no-repeat;
-    background-size: 400vh;
-    width: 100vw;
-    height: 130vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+body::before{
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0;
     background: linear-gradient(90deg, rgb(43, 114, 177), #55a6b8 );
+    opacity: 0.7;
+    z-index: -1;
 }
 
 h3{
-    font-size: 20px;
-    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    
+    padding: 1.5em 0 1em 0;
+    text-align: center;
+    color: #efba5b;
+    z-index: 1;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.671);
 }
 
+
+
 h2{
+    font-family: "Bauhaus 93"; src: url("//db.onlinewebfonts.com/t/89d11a443c316da80dcb8f5e1f63c86e.eot"); src: url("//db.onlinewebfonts.com/t/89d11a443c316da80dcb8f5e1f63c86e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/89d11a443c316da80dcb8f5e1f63c86e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/89d11a443c316da80dcb8f5e1f63c86e.woff") format("woff"), url("//db.onlinewebfonts.com/t/89d11a443c316da80dcb8f5e1f63c86e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/89d11a443c316da80dcb8f5e1f63c86e.svg#Bauhaus 93") format("svg"); 
+    padding: 1.5em;
     text-align: center;
-    font-size: 40px;
-    font-family: arial;
-    margin-top: 10px;
-    color: aqua;
-    text-shadow: 0px 0px 6px black;
+    color: white;
+    z-index: 1;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.671);
 }
 
 .acerca_de{
-    width: 100vw;
+    width: 100%;
+    height: auto;
   }
 
-.acerca_de p{
-    font-size: clamp(1rem,1vw,1.8rem);
-    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
-    text-align: justify;
-    text-justify: center;
-    padding: 5px;
-    margin: 0;
-    width:fit-content;
-    height: fit-content;
-    overflow: hidden;
+.acerca_de h6{
+    padding: 0 7em 0 7em;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
   }
 
 .content-all{
