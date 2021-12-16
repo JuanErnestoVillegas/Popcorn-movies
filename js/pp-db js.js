@@ -617,6 +617,12 @@
         }
     ]
 
+//Pelis a LocalStorage
+let movies;
+let moviesLS=JSON.stringify(films)
+localStorage.setItem('movies',moviesLS)
+let pelis = JSON.parse(localStorage.getItem ("movies"));
+
 
     // Boton Búsqueda
 
@@ -650,6 +656,8 @@ const filtrar = (event) => {
         <hr style="margin:1px 0px 1px 0px">
         `
         searchFilm.appendChild(resultado);
+        resultado.classList.remove("li-box");
+        document.getElementById('searcher').value="";
     });
     searchFilm.removeAttribute("hidden");
 }

@@ -24,6 +24,8 @@
 
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="css/agregarmovie.css">
+
 </head>
 
 <body>
@@ -76,13 +78,65 @@
     </div>
   </nav>
 
-  
+<!--   
 <table id="bs-table" class="table table-striped table-dark table-hover"
        data-show-columns="true" data-click-to-select="true">
-</table>
+</table> -->
+
+    <!-- ADMINISTRAR PELICULAS -->
+    <div class="administracion bg-colorg w-100 main-m">
+      <h2 class="p-2 pt-4 titlesandbtns color3">Administración de películas</h2>
+      <p class="mx-3 commontexts color6"> En la siguente tabla, se pueden observar todas las películas alojadas en nuestro servidor. Brindando la posibilidad de agregar una película presionando el botón "Crear Película", seleccionar una pelicula de tabla y modificar o eliminarla con los botones "Editar" y "Eliminar" respectivamente.
+      </p>
+      <div class="d-flex py-3">
+          <!-- TABLA DE PELICULAS  -->
+          <div class="movies-table table-striped table-dark table-responsive table-hover col-8-5 bg-color1 p-0 ml-2" data-click-to-select="true"></div>
+          <div class="col-3 d-flex flex-column mt-5 btns">
+              <!-- botón Modal Crear pelicula-->
+              <button type="button" class="btn-crear btn bg-color2 color6 p-1 my-1 titlesandbtns" data-toggle="modal" data-target="#crearPeliModal">
+          Crear pelicula
+                </button>
+              <!-- Botón para editar pelicula -->
+              <button class="btn-editar btn bg-color2 color6 p-1 my-1 edit-btn titlesandbtns" data-toggle="modal" data-target="#editarPeliModal" disabled>
+          Editar pelicula
+               </button>
+              <!-- Botón para eliminar pelicula -->
+              <button class="btn-eliminar btn bg-color2 color6 p-1 my-1 titlesandbtns eliminarPeli" data-toggle="modal" data-target="#eliminarPeliModal" disabled>
+          Eliminar pelicula
+              </button>
+          </div>
+      </div>
+      <!-- Modal para crear pelicula-->
+      <div class="modal fade" id="crearPeliModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <form id="rootForm"></form>
+              </div>
+          </div>
+      </div>
+      <!-- Modal para editar pelicula-->
+      <div class="modal fade" id="editarPeliModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <form id="rootFormE"></form>
+              </div>
+          </div>
+      </div>
+      <!-- Modal para borrar pelicula-->
+      <div class="modal fade" id="eliminarPeliModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div id="rootElim"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- FIN ADMINISTRACIÓN PELICULAS -->
+
 
 </body>
-<script src="js/pp-db js.js"></script>
+
+<!-- <script src="js/pp-db js.js"></script>
 <script>
   const TABLE = document.querySelector("table")
   const TABLE_ID = TABLE.getAttribute("id")
@@ -172,5 +226,13 @@
       }
     }
   )()
-</script>
+</script> -->
+<script src="js/adminPelis.js"></script>
+<!-- <script src="js/agregarMovie.js"></script> -->
+<script src="js/crearPelicula.js"></script>
+<!-- <script src="js/editarPelicula.js"></script>
+<script src="js/borrarPeliculas.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </html>

@@ -18,11 +18,42 @@ class User {
 }
 
 let users = [
-	new User('Administrador','Popcorn Movies','ad.popcorn.movies2021@gmail','12345678', true),
-	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false)
-	
+	new User('Admin','Popcorn Movies','ad.popcorn.movies2021@gmail.com','12345678', true),
+	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false),
+	new User('Juan Ernesto','Villegas','jevillegas_123@hotmail,com','12345678', false),
+
 ]
 
+//Usuarios a LocalStorage
+let usersDb;
+let usersLS=JSON.stringify(users)
+localStorage.setItem('usersDb',usersLS)
+let usuarios = JSON.parse(localStorage.getItem ("users"));
+
+// async function getUsuarios() {
+// 	const URL = 'http://localhost:3000/usuarios'
+//     const response = await fetch(URL)
+//     const data = await response.json()
+// 	if(!localStorage.getItem(data)){
+// 	// let userJSON = JSON.stringify(usuarios);
+// 	localStorage.setItem("user", data);
+// 	}
+//     return data
+// }
+
+// async function getUsuarios() {
+// 	const URL = 'http://localhost:3000/usuarios'
+//     const response = await fetch(URL)
+//     const data = await response.json()
+//     return data
+// }
+
+// getUsuarios();
+
+// if(!localStorage.getItem("usuarios")){
+// 	let userJSON = JSON.stringify(usuarios);
+// 	localStorage.setItem("usuarios", userJSON);
+// }
 
 
 function loginCheck(event) {

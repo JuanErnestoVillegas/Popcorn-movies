@@ -1,9 +1,9 @@
-body{
+/* body{
     background-image: url(../assets/img/contacto-background.jpg); 
     margin: 0;
     background-attachment: fixed;
     background-size: cover;
-}
+} */
 
 .bigicon {
     font-size: 28px;
@@ -11,7 +11,7 @@ body{
 }
 
 form{
-    width: 60%;
+    width: 100%;
     margin: auto;
     margin-top: 0;
     color: white;
