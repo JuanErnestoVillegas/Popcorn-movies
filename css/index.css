@@ -34,110 +34,6 @@ body{
     text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);
 }
 
-/* Categories Control*/
-
-.contenedor-titulo-controles{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
-
-.contenedor-titulo-controles h3{
-    color: #fff;
-    font-size: 30px;
-}
-
-.contenedor-titulo-controles .indicadores button {
-    background: #fff;
-    height: 3px;
-    width: 10px;
-    cursor: pointer;
-    border: none;
-    margin-right: 2px;
-}
-
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.active {
-    background: blue;
-
-}
-
-/* Categorias */
-
-.contenedor {
-    margin: auto;
-    width: 90%;
-}
-
-.peliculas-recomendadas {
-    margin-bottom: 70px;
-    padding: 10px;
-}
-
-.peliculas-recomendadas .contenedor-principal {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izq,
-.peliculas-recomendadas .contenedor-principal .flecha-der {
-    position: absolute;
-    border: none;
-    background: rgba(0, 0, 0, 0.3);
-    font-size: 40px;
-    height: 50%;
-    top: calc(50% - 25%);
-    line-height: 40px;
-    width: 50px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 500;
-    transition: .2s ease all;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izq:hover,
-.peliculas-recomendadas .contenedor-principal .flecha-der:hover {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izq{
-    left: 0;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-der{
-    right: 0;
-}
-
-/* Films */
-
-.peliculas-recomendadas .card-container {
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-
-.peliculas-recomendadas .card-container .card {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.peliculas-recomendadas .card-container .card .card-films {
-    min-width: 20%;
-    transition: .3s ease all;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-}
-
-.peliculas-recomendadas .card-container .card .card-films.hover {
-    transform: scale(1.2);
-    transform-origin: center;
-}
-
-.peliculas-recomendadas .card-container .card .card-films img {
-    width: 100%;
-    vertical-align: top;
-}
 
 
 
@@ -171,8 +67,10 @@ body{
     overflow-y: visible;
     scroll-behavior: smooth;
 }
+
 .card-container::-webkit-scrollbar{
     display: none;
+    
 }
 .card{
     position: relative;
@@ -198,6 +96,7 @@ body{
 }
 
 .card-body{
+    
     opacity: 0;
     width: 100%;
     height: 100%;
@@ -239,7 +138,7 @@ body{
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin: 1em 1em 1em 0.6em;
-    
+    text-decoration: none;
     padding: 10px 5px;
     border-radius: 3px;
 }
@@ -266,11 +165,15 @@ body{
     text-shadow: 4px 4px 6px rgb(0 0 0 / 100%);
 }
 
-/*.flecha-izq:hover, .flecha-der:hover {
-    background: rgba(0, 0, 0, 0.5);
-}*/
-    
+.card-body a{
+    text-decoration: none;
+    color:black;
+}
 
+.card-body a:hover{
+    text-decoration: none;
+    color:white;
+}
 
 .flecha-izq {
     left: 0;
@@ -281,3 +184,116 @@ body{
     right: 0;
     margin-right: 1.5em;
 }
+
+
+/* Media Queries */
+
+@media (min-aspect-ratio: 16/9){
+    .card {
+         width: 100%;
+         height: auto;
+     }
+     .carousel-item {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .carousel-item::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(180deg, rgba(85,166,184,0) 75%, rgba(43,114,177,1) 100%);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        visibility: hidden;
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-caption {
+        margin-bottom: 1em;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .caroubtn1 {
+        font-size: 1em;  
+    }
+
+    .caroubtn2{
+        font-size: 1em;
+    }
+
+    .title{
+        margin-left: 1.4em;
+    }
+    
+    .flecha-izq {
+        left: 0;
+        margin-left: 1em;
+    }
+    
+    .flecha-der {
+        right: 0;
+        margin-right: 1em;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        visibility: hidden;
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-caption {
+        margin-bottom: 0.5em;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .caroubtn1 {
+        font-size: 0.5em;  
+    }
+
+    .caroubtn2{
+        font-size: 0.5em;
+    }
+
+    .title{
+        margin-left: 1.4em;
+    }
+    
+    .flecha-izq {
+        left: 0;
+        margin-left: 1em;
+    }
+    
+    .flecha-der {
+        right: 0;
+        margin-right: 1em;
+    }
+}
+
+    
+
+
+
+

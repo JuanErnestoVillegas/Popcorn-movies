@@ -721,7 +721,7 @@ comediaFilms.forEach(film =>{
 const accionCarrousel = document.getElementById('accion-carrousel');
 const accionFilms = films.filter(film => film.genre == 'Accion');
 
-dramaFilms.forEach(film =>{
+accionFilms.forEach(film =>{
     let card = document.createElement('div');
     card.innerHTML = `
     <div class="card" id=${film.id}>
