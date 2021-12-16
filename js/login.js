@@ -23,7 +23,10 @@ let users = [
 	
 ]
 
-
+if(!localStorage.getItem("films")){
+	let filmsJSON = JSON.stringify(films);
+	localStorage.setItem("films",filmsJSON);
+}
 
 function loginCheck(event) {
 	event.preventDefault();
@@ -32,7 +35,8 @@ function loginCheck(event) {
 	let pass = document.querySelector('#pass').value;
 	let userLogged = users.find(User=>User.email == email);
 	if(userLogged && userLogged.password == pass){
-		window.location.assign('index.html');
+		localStorage.setItem('user',userLogged)
+		window.location.assign(window.location.origin+'/index.html');
 	}else {
 		let dataError = document.createElement('div');
 		dataError.innerText='Los datos ingresados no son correctos';

@@ -40,35 +40,20 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link text-light" aria-current="page" href="#"
-                  >Iniciar Sesión</a
+                <a class="nav-link text-light" aria-current="page" href="/index.html"
+                  >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="registrarse.html">Registrarse</a>
+                <a class="nav-link text-light" aria-current="page" href="/landingPage.html"
+                  >Cerrar Sesión</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="contacto.html">Contacto</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle text-light"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Administrar
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
+              <li class="nav-item controlAdmin" id="navbarAdmin" >
+                <a class="nav-link text-light" href="/administracionPelis.html">Administrar</a>
               </li>
             </ul>
           </div>
@@ -79,7 +64,7 @@
       <!-- FIN DEL NAVBAR -->
     <div class="acerca_de">
         <div>
-          <button onclick="window.location.href='index.html';" class="button-popcorn" role="button">Inicio</button>
+          <button onclick="window.location.assign(window.location.origin+'/index.html');" class="button-popcorn" role="button">Inicio</button>
         </div>
         <h3><b>Acerca de nosotros</b></h3>
         <hr>
@@ -177,6 +162,8 @@
             
         </div>
     </div>
+
+    <script src="/js/controlAdmin.js"></script>
     
     <!-- JavaScript Bundle with Popper -->
     <script

@@ -24,4 +24,10 @@ nav img {
   text-shadow: none;
 }
 
+.controlAdmin{
+  display: none;
+}
 
+.is-admin{
+  display: block;
+}

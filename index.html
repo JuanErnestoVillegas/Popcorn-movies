@@ -53,21 +53,8 @@
             <li class="nav-item">
               <a class="nav-link text-light" href="contacto.html">Contacto</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle text-light"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Administrar
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="administracionPelis.html">Peliculas</a></li>
-                <li><a class="dropdown-item" href="#">Mi lista</a></li>
-              </ul>
+            <li class="nav-item controlAdmin" id="navbarAdmin" >
+              <a class="nav-link text-light" href="/administracionPelis.html">Administrar</a>
             </li>
           </ul>
           
@@ -249,7 +236,7 @@
       <div id="footer-placeholder"> </div>
 
     <script src="//code.jquery.com/jquery.min.js"></script>    <!--script de jquery -->
-
+    <script src="/js/controlAdmin.js"></script>
     <script>$.get("navbar.html", function (data) {
     $("#nav-placeholder").replaceWith(data);
     });</script> 
