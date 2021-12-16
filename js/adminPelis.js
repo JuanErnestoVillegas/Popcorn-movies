@@ -134,9 +134,9 @@ function createFormE() {
 <label>Genero:</label>
 <select id="generoInputE" name="opciones" class="formulario_input_select " required>
   <option value="1">Accion</option>
-  <option value="2">Drama</option>
+  <option value="2">Ciencia ficcion</option>
   <option value="3">Comedia</option>
-  <option value="4">Ciencia ficcion</option>
+  <option value="4">Drama</option>  
   <option value="5">Terror</option>
 </select>
 </div>

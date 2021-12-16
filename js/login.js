@@ -22,11 +22,35 @@ let users = [
 	new User('juan','portillo','juanpablo.portillo2@gmail.com','12345678', false)
 ]
 
+async function getUsuarios() {
+	const URL = 'http://localhost:3000/usuarios'
+    const response = await fetch(URL)
+    const data = await response.json()
+	if(!localStorage.getItem(data)){
+	// let userJSON = JSON.stringify(usuarios);
+	localStorage.setItem("usuarios", data);
+	}
+    return data
+}
 
+// async function getUsuarios() {
+// 	const URL = 'http://localhost:3000/usuarios'
+//     const response = await fetch(URL)
+//     const data = await response.json()
+//     return data
+// }
+
+// getUsuarios();
+
+// if(!localStorage.getItem("usuarios")){
+// 	let userJSON = JSON.stringify(usuarios);
+// 	localStorage.setItem("usuarios", userJSON);
+// }
 
 
 function loginCheck(event) {
 	event.preventDefault();
+	
 	let email = document.querySelector('#email').value;
 	let pass = document.querySelector('#pass').value;
 	let userLogged = users.find(User=>User.email == email);
