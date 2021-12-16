@@ -24,17 +24,16 @@ let harryPotter = new Pelicula  (
 )
 */
 
+
 let id = window.location.hash.slice (1);
-let films = JSON.parse(localStorage.getItem ("films"));
-let pelicula = films.find (film => film.id == id);
+let pelis = JSON.parse(localStorage.getItem ("movies"));
 
+let pelicula = pelis.find (film => film.id == id);
 
+// console.log(pelicula);
 let peliculaDetalles = document.getElementById ('contenido');
 /*
-<video controls autoplay>
-            <source src="assets/videos/1917_Trim.mp4" type="video/mp4">                
-            Your browser does not support the video tag.
-            </video> ';"
+ <iframe src="${pelicula.video}+?controls=0" width="560" height="315" frameborder="0" allow="accelerometer; autoplay"></iframe>
 */
 
 peliculaDetalles.innerHTML = `
@@ -43,8 +42,9 @@ peliculaDetalles.innerHTML = `
     </div>
     <div class="container">
         <div class="encimaImagen">
-            <button type="button" class="btn btn-light me-4 my-4" >
-                <i class="fas fa-play me-2"></i>                 
+            <button type="button" class="btn btn-light me-4 my-4">
+                <i class="fas fa-play me-2"></i>   
+               
                 Reproducir
             </button>
             <button type="button" class="btn btn-dark rounded-circle me-3">

@@ -2,27 +2,29 @@
     "usuarios": [
     {
         "id": "1",
-        "nombre": "",
-        "apellido": "",
+        "nombre": "Administrador",
+        "apellido": "PopCorn Movies",
         "pais": "",
-        "usuario": "",
-        "contraseña": ""
+        "usuario": "ad.popcorn.movies2021@gmail.com",
+        "contraseña": "12345678",
+        "admin": "true"
     },
     {
         "id": "2",
-        "nombre": "",
-        "apellido": "",
+        "nombre": "Juan Pablo",
+        "apellido": "Portillo",
         "pais": "",
-        "usuario": "",
-        "contraseña": ""
+        "usuario": "juanpablo.portillo2@gmail.com",
+        "contraseña": "12345678",
+        "admin": "false"
     },
     {
         "id": "3",
-        "nombre": "",
-        "apellido": "",
+        "nombre": "Juan Ernesto",
+        "apellido": "Villegas",
         "pais": "",
-        "usuario": "",
-        "contraseña": ""
+        "usuario": "jevilleas_123@hotmail.com",
+        "contraseña": "12345678"
     },
     {
         "id": "4",
@@ -70,3 +72,7 @@
 
     ]
 }
+
+
+
+

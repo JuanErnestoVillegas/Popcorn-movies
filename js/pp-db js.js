@@ -617,6 +617,12 @@
         }
     ]
 
+//Pelis a LocalStorage
+let movies;
+let moviesLS=JSON.stringify(films)
+localStorage.setItem('movies',moviesLS)
+let pelis = JSON.parse(localStorage.getItem ("movies"));
+
 
     // Boton Búsqueda
 
