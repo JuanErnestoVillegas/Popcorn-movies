@@ -631,17 +631,17 @@ const filtrar = (event) => {
     searchFilm.innerHTML = '';
 
     const pelis = searcher.value.toLowerCase();
-    let result = films.filter(film => film.name.toLowerCase().includes(pelis))
-    resultado.classList.remove("li-box");
+    let result = films.filter(film => film.name.toLowerCase().includes(pelis))    
     result.forEach(element => {
         let resultado = document.createElement("li");
         resultado.classList.add("li-box");
         resultado.innerHTML = `
-        <a href="#" class="a-li text-decoration-none link-dark">${element.name}</a>
-        <hr style="margin:1px 0px 1px 0px">
+   
         <a href="/Detalle.html" id=${element.id}>${element.name}</a>
         `
         searchFilm.appendChild(resultado);
+        resultado.classList.remove("li-box");
+        document.getElementById('searcher').value="";
     });
     searchFilm.removeAttribute("hidden");
     
