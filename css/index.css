@@ -239,7 +239,7 @@ body{
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin: 1em 1em 1em 0.6em;
-    
+    text-decoration: none;
     padding: 10px 5px;
     border-radius: 3px;
 }
@@ -266,6 +266,15 @@ body{
     text-shadow: 4px 4px 6px rgb(0 0 0 / 100%);
 }
 
+.card-body a{
+    text-decoration: none;
+    color:black;
+}
+
+.card-body a:hover{
+    text-decoration: none;
+    color:white;
+}
 /*.flecha-izq:hover, .flecha-der:hover {
     background: rgba(0, 0, 0, 0.5);
 }*/
