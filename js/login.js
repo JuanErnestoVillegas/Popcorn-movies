@@ -24,12 +24,11 @@ let users = [
 
 ]
 
-<<<<<<< HEAD
 if(!localStorage.getItem("films")){
 	let filmsJSON = JSON.stringify(films);
 	localStorage.setItem("films",filmsJSON);
 }
-=======
+
 //Usuarios a LocalStorage
 let usersDb;
 let usersLS=JSON.stringify(users)
@@ -61,7 +60,6 @@ let usuarios = JSON.parse(localStorage.getItem ("users"));
 // 	localStorage.setItem("usuarios", userJSON);
 // }
 
->>>>>>> 2d8169c1cb35361660dac84cca827ba807e8abea
 
 function loginCheck(event) {
 	event.preventDefault();
