@@ -632,6 +632,7 @@ const filtrar = (event) => {
 
     const pelis = searcher.value.toLowerCase();
     let result = films.filter(film => film.name.toLowerCase().includes(pelis))
+    resultado.classList.remove("li-box");
     result.forEach(element => {
         let resultado = document.createElement("li");
         resultado.classList.add("li-box");
@@ -669,12 +670,8 @@ dramaFilms.forEach(film =>{
         <img src=${film.image1} class="card-img" alt="#">
         <div class="card-body">
             <h2 class="movie-tittle">${film.name}</h2>
-<<<<<<< HEAD
-            <button class="watchlist-btn">Ver ahora</button>   
-=======
             <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
             <a href="/Detalle.html" id=${film.id}><button class="watchlist-btn">${film.id}</button></a>   
->>>>>>> 20fcd07a871dead053dee43fb82b9d28cd6eaf9f
         </div>
     </div>
     `
