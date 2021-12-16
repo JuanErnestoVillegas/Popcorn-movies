@@ -646,24 +646,23 @@ const filtrar = (event) => {
         let resultado = document.createElement("li");
         resultado.classList.add("li-box");
         resultado.innerHTML = `
-        <a href="#" class="a-li text-decoration-none link-dark">${element.name}</a>
+        <a href="/Detalle.html" id=${element.id} class="a-li text-decoration-none link-dark">${element.name}</a>
         <hr style="margin:1px 0px 1px 0px">
-        <a href="/Detalle.html" id=${element.id}>${element.name}</a>
         `
-        /*<a href="/Detalle.html" id=${element.id}>${element.name}</a>*/
         searchFilm.appendChild(resultado);
     });
     searchFilm.removeAttribute("hidden");
 }
 
-/*searcher.addEventListener('blur', () => {
-    searchFilm.removeChild(resultado));
-       /* while (searchFilm.firstChild){
+searcher.addEventListener('blur', () => {
+    console.log(searchFilm);
+    console.log(firstChild);
+    
+       while (searchFilm.childNodes.length>0){
             searchFilm.removeChild(searchFilm.firstChild);
             console.log('hola')
        }
-
-})*/
+})
 
 /*searchButton.addEventListener('keyup', filtrar)
 
@@ -684,16 +683,11 @@ dramaFilms.forEach(film =>{
     let card = document.createElement('div');
     card.innerHTML = `
     <div class="card" id=${film.id}>
-        <img src=${film.image1} class="card-img" alt="#">
-        <div class="card-body">
-            <h2 class="movie-tittle">${film.name}</h2>
-<<<<<<< HEAD
-            <button class="watchlist-btn">Ver ahora</button>   
-=======
-            <h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>
-            <a href="/Detalle.html" id=${film.id}><button class="watchlist-btn">${film.id}</button></a>   
->>>>>>> 20fcd07a871dead053dee43fb82b9d28cd6eaf9f
-        </div>
+    <img src=${film.image1} class="card-img" alt="#">
+    <div class="card-body">
+        <h2 class="movie-tittle">${film.name}</h2>
+        <button class="watchlist-btn"><a href="/Detalle.html#${film.id}" >Ver ahora</a></button>   
+    </div>
     </div>
     `
     dramaCarrousel.appendChild(card);
@@ -706,11 +700,11 @@ comediaFilms.forEach(film =>{
     let card = document.createElement('div');
     card.innerHTML = `
     <div class="card" id=${film.id}>
-        <img src=${film.image1} class="card-img" alt="#">
-        <div class="card-body">
-            <h2 class="movie-tittle">${film.name}</h2>
-            <button class="watchlist-btn">Ver ahora</button>   
-        </div>
+    <img src=${film.image1} class="card-img" alt="#">
+    <div class="card-body">
+        <h2 class="movie-tittle">${film.name}</h2>
+        <button class="watchlist-btn"><a href="/Detalle.html#${film.id}" >Ver ahora</a></button>   
+    </div>
     </div>
     `
     comediaCarrousel.appendChild(card);
@@ -723,11 +717,11 @@ dramaFilms.forEach(film =>{
     let card = document.createElement('div');
     card.innerHTML = `
     <div class="card" id=${film.id}>
-        <img src=${film.image1} class="card-img" alt="#">
-        <div class="card-body">
-            <h2 class="movie-tittle">${film.name}</h2>
-            <button class="watchlist-btn">Ver ahora</button>   
-        </div>
+    <img src=${film.image1} class="card-img" alt="#">
+    <div class="card-body">
+        <h2 class="movie-tittle">${film.name}</h2>
+        <button class="watchlist-btn"><a href="/Detalle.html#${film.id}" >Ver ahora</a></button>   
+    </div>
     </div>
     `
     accionCarrousel.appendChild(card);
@@ -739,14 +733,16 @@ const terrorFilms = films.filter(film => film.genre == 'Terror');
 terrorFilms.forEach(film =>{
     let card = document.createElement('div');
     card.innerHTML = `
-    <div class="card d-flex" id=${film.id}>
-        <img src=${film.image1} class="card-img" alt="#">
-        <div class="card-body">
-            <h2 class="movie-tittle" style="text-shadow: 4px 4px 6px rgb(0 0 0 / 80%);">${film.name}</h2>
-            <!--<h6 class="des">Lorem, ipsum dolor sit amet consectetur</h6>-->
-            <button class="watchlist-btn">Ver ahora</button>   
-        </div>
+    <div class="card" id=${film.id}>
+    <img src=${film.image1} class="card-img" alt="#">
+    <div class="card-body">
+        <h2 class="movie-tittle">${film.name}</h2>
+        <button class="watchlist-btn"><a href="/Detalle.html#${film.id}" >Ver ahora</a></button>   
+    </div>
     </div>
     `
     terrorCarrousel.appendChild(card);
 })
+
+
+

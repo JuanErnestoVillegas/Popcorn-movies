@@ -48,7 +48,7 @@
     font-size: 17px;
     border-radius: 50%;
     border: none;
-    cursor: pointer;
+    
 }
 
 .btn-search button:hover{
@@ -62,7 +62,7 @@
     font-size: 17px;
     border-radius: 50%;
     border: none;
-    cursor: pointer;
+    
 }
 
 .btn-search i{
