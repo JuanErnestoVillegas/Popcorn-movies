@@ -46,26 +46,50 @@ nav img {
 }
 
 
-.item h1 {
-  line-height: 4rem;
-  font-size: 50px;
+h1 {
+  padding-bottom: 1em;
   /* text-transform: capitalize; */
 }
 
-.item button {
-  background: transparent;
-  border-radius: 10px;
-  color: white;
+h5{
+  padding-bottom: 0.8em;
 }
+
+
 .containerHeader img {
   max-width: 80%;
   padding-bottom: 1em;
   
 }
 .boton-suscribirse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  font-weight: 500;
+  padding: 0.5em 1em;
   text-decoration: none;
-  color: white;
+  background: white;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.74);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.438);
 }
+
+.boton-suscribirse:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: grey;
+  border-radius: 3px;
+  color: #fff;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.438);
+}
+
+
 
 @media screen and (max-width: 800px){
   .containerHeader {
