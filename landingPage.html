@@ -78,11 +78,18 @@
       </div>
     </div>
 
+    <!-- Footer -->
+    <div id="footer-placeholder"> </div>
+
+
     <script src="//code.jquery.com/jquery.min.js"></script>    <!--script de jquery -->
 
     <script>$.get("navbar.html", function (data) {
     $("#nav-placeholder").replaceWith(data);
     });</script> 
+    <script>$.get("footer.html", function (data) {
+      $("#footer-placeholder").replaceWith(data);
+      });</script> 
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

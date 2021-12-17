@@ -12,6 +12,8 @@
     <link href="//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93" rel="stylesheet" type="text/css"/>
     <script src="https://kit.fontawesome.com/97add05686.js" crossorigin="anonymous"></script>
     <title>Pelicula Detalles</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/botonbusqueda.css">
 </head>
 <body class="principal">
     <header>
@@ -52,6 +54,21 @@
             </ul>
           </div>
         </div>
+        <!--Botón Búsqueda-->
+        <form id="form-search" class="d-flex flex-column search" onsubmit="filtrar(event)">
+            <input
+                id="searcher"
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+             <div class="btn-search">
+              <button id="search-button" class="btn" type="submit"><i class="fas fa-search"></i></button>
+              <ul id="search-film" hidden></ul>
+            
+            </div>
+          </form>
     </header>
 
     <main>
