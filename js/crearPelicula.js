@@ -1,4 +1,3 @@
-//!Funcion para renderizar formulario en el modal
 const formulario = document.getElementById("rootForm");
 const modalForm = document.getElementById('crearPeliModal');
 formulario.classList.add('bg-color1');
@@ -105,30 +104,26 @@ formulario.addEventListener('submit', e => {
         const videoPeli = document.getElementById('videoInput').value;
 
 
-        /*   let publicadaPeli = '';
-           if (inputCheck.checked == true) {
-               publicadaPeli = 'true';
-           } else {
-               publicadaPeli = 'false';
-           }
-           */
         const data = {
-            nombre: nombrePeli,
-            descripcion: descripcionPeli,
+            name: nombrePeli,
+            sinopsis: descripcionPeli,
             director: directorPeli,
-            genero: generoPeli,
-            categoria: categoriaPeli,
-            año: anioPeli,
+            genre: generoPeli,
+            categorie: categoriaPeli,
+            year: anioPeli,
             publicada: publicadaPeli,
             destacada: destacadaPeli,
             imagen: imagenPeli,
             video: videoPeli
+
         };
         console.log(data);
         postNewMovie(data);
     })
+  
     //! Realiza post con la nueva pelicula
-async function postNewMovie({ nombre, descripcion, director, genero, categoria, año, publicada, destacada, imagen, video }) {
+
+async function postNewMovie({ name, sinopsis, director, genre, categorie, year, publicada, destacada, imagen, video }) {
 
     const url = 'http://localhost:3000/films';
     const response = await fetch(url, {
@@ -138,7 +133,7 @@ async function postNewMovie({ nombre, descripcion, director, genero, categoria, 
             'Content-Type': 'application/json'
         },
 
-        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, año, publicada, destacada, imagen, video })
+        body: JSON.stringify({ name, sinopsis, director, genre, categorie, year, publicada, destacada, imagen, video })
 
     })
     const newMovie = await response.json();
