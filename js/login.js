@@ -28,10 +28,10 @@ let newUsers;
 
 
 
-if(!localStorage.getItem("films")){
-	let filmsJSON = JSON.stringify(films);
-	localStorage.setItem("films",filmsJSON);
-}
+// if(!localStorage.getItem("films")){
+// 	let filmsJSON = JSON.stringify(films);
+// 	localStorage.setItem("films",filmsJSON);
+// }
 
 //Usuarios a LocalStorage
 let usersDb;

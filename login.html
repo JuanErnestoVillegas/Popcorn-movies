@@ -54,6 +54,7 @@
             <!-- Boton Modal -->
             <div class="text-center mt-4">
               <button
+                id="recuperar"
                 type="button"
                 class="btn btn-primary"
                 data-toggle="modal"
@@ -78,8 +79,10 @@
                         Recuperar contraseña
                       </h5>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body edit-content">
+                      ...
                       <input
+                        id="inputRecup"
                         type="email"
                         class="email-input"
                         placeholder="Ingrese su Email" 
@@ -132,5 +135,19 @@
     ></script>
     <script src="./js/login.js"></script>
     <script src="js/mail.js"></script>
+    <script>
+        $('#exampleModal').on('show.bs.modal', function(e) {
+            
+            var $modal = $(this),
+                esseyId = `${email.value}`;
+            
+
+
+                    $modal.find('.edit-content').html(esseyId);
+            
+        })
+
+    </script>
+
   </body>
 </html>

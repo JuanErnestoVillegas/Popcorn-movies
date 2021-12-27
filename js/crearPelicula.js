@@ -102,9 +102,11 @@ formulario.addEventListener('submit', e => {
         let destacadaPeli = inputCheckDestacada.checked;
         const imagenPeli = document.getElementById('imagenInput').value;
         const videoPeli = document.getElementById('videoInput').value;
+        let newId = films.length + 1;
 
 
         const data = {
+            id: newId,
             name: nombrePeli,
             sinopsis: descripcionPeli,
             director: directorPeli,
