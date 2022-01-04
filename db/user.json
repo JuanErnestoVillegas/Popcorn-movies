@@ -1,7 +1,7 @@
 {
     "usuarios": [
     {
-        "id": "1",
+        "id": 1,
         "nombre": "Administrador",
         "apellido": "PopCorn Movies",
         "pais": "",
@@ -10,7 +10,7 @@
         "admin": "true"
     },
     {
-        "id": "2",
+        "id": 2,
         "nombre": "Juan Pablo",
         "apellido": "Portillo",
         "pais": "",
@@ -19,57 +19,14 @@
         "admin": "false"
     },
     {
-        "id": "3",
+        "id": 3,
         "nombre": "Juan Ernesto",
         "apellido": "Villegas",
         "pais": "",
         "usuario": "jevilleas_123@hotmail.com",
-        "contraseña": "12345678"
-    },
-    {
-        "id": "4",
-        "nombre": "",
-        "apellido": "",
-        "pais": "",
-        "usuario": "",
-        "contraseña": ""
-    },
-    {
-        "id": "5",
-        "nombre": "",
-        "apellido": "",
-        "pais": "",
-        "usuario": "",
-        "contraseña": ""
-    },
-    {
-        "id": "6",
-        "nombre": "",
-        "apellido": "",
-        "pais": "",
-        "usuario": "",
-        "contraseña": ""
-    },
-    {
-        "id": "7",
-        "nombre": "",
-        "apellido": "",
-        "pais": "",
-        "usuario": "",
-        "contraseña": ""
-    },
-
-    {
-        "id": "8",
-        "nombre": "",
-        "apellido": "",
-        "pais": "",
-        "usuario": "",
-        "contraseña": ""
+        "contraseña": "12345678",
+        "admin": "true"
     }
-
-
-
     ]
 }
 

@@ -61,14 +61,10 @@ const validarCampo = (expresion, input, campo) => {
   if (expresion.test(input.value)) {
     document.getElementById(`${campo}`).classList.remove("is-invalid");
     document.getElementById(`${campo}`).classList.add("is-valid");
-    // document.getElementById(`${campo}`).classList.add(' is-valid');
-    // document.getElementById(`${campo}`).classList.add(' is-invalid');
     campos[campo] = true;
   } else {
     document.getElementById(`${campo}`).classList.add("is-invalid");
     document.getElementById(`${campo}`).classList.remove("is-valid");
-    // document.getElementById(`${campo}`).classList.add(' is-valid');
-    // document.getElementById(`${campo}`).classList.add(' is-invalid');
     campos[campo] = false;
   }
   console.log("test");
@@ -122,7 +118,7 @@ function guardarUsuario() {
   const apellido = document.getElementById("validationServer02").value;
   const usuario = document.getElementById("usuario").value;
   const pais = document.getElementById("inputState").value;
-  const contraseña = document.getElementById("validationServer06").value;
+  const contraseña = document.getElementById("validationServer06").value;  
   let usuarios = JSON.parse(localStorage.getItem("usuarios"));
   if (usuarios == null) {
     usuarios = [];
@@ -137,12 +133,30 @@ function guardarUsuario() {
   };
   console.log(newUsuario);
 
+//FIN DEL LOCALSTORAGE
   usuarios.push(newUsuario);
   let usuarioLS = JSON.stringify(usuarios);
   localStorage.setItem("usuarios", usuarioLS);
+
+  guardarUserJson(newUsuario);
 }
 
-//FIN DEL LOCALSTORAGE
+
+
+    //! Guardo User en DB Json-server
+
+    async function guardarUserJson(newUsuario) {
+
+      const url = 'http://localhost:3000/usuarios';
+      const response = await fetch(url, {
+          method: 'CREATE',
+          headers: {              
+              'Content-Type': 'application/json'
+          },
+  
+          body: JSON.stringify(newUsuario)  
+        });
+   }
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -154,8 +168,7 @@ formulario.addEventListener("submit", (e) => {
     campos.validationServer07 &&
     campos.inputState
   ) {
-    //console.log("estoy adentro del if");
-
+    
     guardarUsuario();
     formulario.reset();
 
@@ -170,6 +183,5 @@ formulario.addEventListener("submit", (e) => {
     });
   } else {
     document.getElementById("checkFormulario").classList.add();
-    //console.log("estoy adentro del else");
-  }
+   }
 });
